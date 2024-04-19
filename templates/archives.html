@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-All Posts · {{ super() }}
+归档 · {{ super() }}
 {% endblock title %}
 
 {% block head_description %}
@@ -11,11 +11,11 @@ Full archives of {{ SITENAME|striptags|e }} blog.
 {% block meta_tags_in_head %}
 {{ super() }}
 {% from '_includes/_defaults.html' import FEATURED_IMAGE, ARCHIVES_URL with context %}
-<meta property="og:title" content="All Posts · {{ SITENAME|striptags|e }}"/>
-<meta name="twitter:title" content="All Posts · {{ SITENAME|striptags|e }}">
+<meta property="og:title" content="归档 · {{ SITENAME|striptags|e }}"/>
+<meta name="twitter:title" content="归档 · {{ SITENAME|striptags|e }}">
 <meta property="og:url" content="{{ SITEURL }}/{{ ARCHIVES_URL }}" />
-<meta property="og:description" content="Full archives of {{ SITENAME|striptags|e }} blog" />
-<meta name="twitter:description" content="Full archives of {{ SITENAME|striptags|e }} blog">
+<meta property="og:description" content="{{ SITENAME|striptags|e }}全部归档" />
+<meta name="twitter:description" content="{{ SITENAME|striptags|e }}全部归档">
 <meta property="og:site_name" content="{{ SITENAME|striptags|e }}" />
 <meta property="og:article:author" content="{{ AUTHOR }}" />
 {% if FEATURED_IMAGE %}
@@ -28,7 +28,7 @@ Full archives of {{ SITENAME|striptags|e }} blog.
 {% from '_includes/_defaults.html' import ARCHIVES_URL with context %}
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">All Posts</a></h1>
+    <h1><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">归档</a></h1>
     </header>
 </div>
 <div class="row-fluid">
